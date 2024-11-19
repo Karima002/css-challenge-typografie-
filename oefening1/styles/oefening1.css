@@ -4,13 +4,21 @@
 
 /* JOUW @FONT-FACE CODE HIER */
 @font-face {
-  /* regular / 400 */
-
-}
+  /* regular / 400 > font-face voor de paragraaf*/
+  font-family: "expletus";
+  src:
+    url("../fonts/ExpletusSans-Regular.ttf");
+  	font-style: Regular;
+    font-weight: 400;
+  }
 
 @font-face {
-  /* bold / 700 */
-
+  /* bold / 700 > font-face voor de h2*/
+  font-family: "expletus-bold";
+  src:
+    url("../fonts/ExpletusSans-Bold.ttf"); /*Hiermee leg je een relatief pad om uit het mapje 'styles' te komen. Met 1 punt zit je in css-challenge-typografie. Met het tweede punt kom je in het mapje 'fonts'. Het absolute pad is het benoemen in het mapje dus fonts/expletusSans-bold*/
+  font-style: bold;
+  font-weight: 700;
 }
 
 
@@ -21,20 +29,22 @@ li:first-of-type {
 
 li:first-of-type h2 {
   /* JOUW CODE HIER */
-  
-
+  font-family: "expletus-bold", sans-serif;
+  font-size: 1.4rem;
 }
 
 li:first-of-type p {
   /* JOUW CODE HIER */
-  
-
+  font-family: "expletus", sans-serif;  
+  font-size: .7rem;
 }
 
 /* hiermee selecteer je de eerste letter van de p in het eerste blokje */
 li:first-of-type p::first-letter {
   /* JOUW CODE HIER */
-
+  font-size: 2rem;
+  line-height: 1.5em;
+  font-weight: bold;
   
 }
 
@@ -48,8 +58,11 @@ li:first-of-type p::first-letter {
 
 /* JOUW @FONT-FACE CODE HIER */
 @font-face {
-  
-}
+  font-family: "montserrat";
+  src:
+    url("../fonts/Montserrat-Thin.ttf");
+  }
+
 
 
 /* hiermee selecteer je het tweede blokje */
@@ -74,7 +87,17 @@ li:nth-of-type(2) h2 {
   color:var(--color);
 
   /* JOUW CODE HIER */
-
+  font-family: "montserrat";
+  font-size: 2.2rem;
+  font-weight: 100;
+  line-height: .9em;
+  text-transform: uppercase;
+  color: var(--color);
+  text-shadow:
+  0 0 0.1em var(--shadow), /*Eerste getal is voor de schaduw-verplaatsing in de x-as, tweede getal voor de schaduw-verplaatsing in de y-as, het derde getal voor de vervaging in de tekst*/
+  0 0 0.2em var(--shadow),
+  0 0 0.3em var(--shadow)
+  ;
   
 }
 
@@ -88,7 +111,10 @@ li:nth-of-type(2) h2 {
 
 /* JOUW @FONT-FACE CODE HIER */
 @font-face {
-  
+  font-family: "saira";
+  src: 
+    url("../fonts/Saira_Condensed-Bold.ttf");
+  font-weight: 700;
 }
 
 li:nth-of-type(3) {
@@ -98,12 +124,25 @@ li:nth-of-type(3) {
   --shadow:rgb(0 0 0 / .75);
 
   /* JOUW CODE HIER */
+  display:grid;
+  grid-auto-columns:min-content;  
+  place-content:center;
+  text-align:center;
   
+  background-color:var(--background);  
 
 }
 
 li:nth-of-type(3) h2 {
   /* JOUW CODE HIER */
+  font-family: "saira";
+  font-size: 2.7rem;
+  font-weight: 100;
+  line-height: 1.1em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color:var(--color);
+  text-shadow: .1em .1em 0 var(--shadow); /*Eerste getal is voor de schaduw-verplaatsing in de x-as, tweede getal voor de schaduw-verplaatsing in de y-as, het derde getal voor de vervaging in de tekst*/
+  transform:skewY(-10deg); /*Text wordt met -10 gedraaid in de y-as.*/
 
-  
 }
