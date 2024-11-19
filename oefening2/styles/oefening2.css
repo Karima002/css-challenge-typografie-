@@ -1,15 +1,95 @@
 /*******************************/
 /* CODE VOOR HET EERSTE BLOKJE */
 /*******************************/
+@font-face {
+    /* regular / 400 > font-face voor de paragraaf*/
+    font-family: "blackhan";
+    src:
+      url("../fonts/BlackHan.ttf");
+    font-style: bold;
+    font-weight: 700;
+    }
+
+li:first-of-type {
+    padding:1em;
+    overflow:auto;
+}
+
+li:nth-of-type(1) {
+    /* custom properties voor tweede blokje */
+    --color:hsl(0 0% 60%);
+    --background:var(--color);
+    --shadow:hsl(0 0% 0% / .5);
+        
+    /* met onderstaande regels staat de tekst in het midden */
+    /* en elk woord op een nieuwe regel */
+    display:grid;
+    grid-auto-columns:min-content;  
+    place-content:center;
+    text-align:center;
+        
+    background-color:var(--background);
+}
 
 
-
+li:first-of-type h2 {
+    font-family: "blackhan", sans-serif;
+    font-size: 4.5rem;
+    color: var(--color);
+    text-shadow: 
+    0 0 0.2em var(--shadow),
+    .2em 0 0.3em var(--shadow)
+    ;
+}
 
 
 /*******************************/
 /* CODE VOOR HET TWEEDE BLOKJE */
 /*******************************/
+@font-face {
+    /* regular / 400 > font-face voor de paragraaf*/
+    font-family: "saira";
+    src:
+      url("../fonts/Saira-Bold.ttf");
+    font-style: bold;
+    font-weight: 700;
+    }
 
+li:first-of-type (2) {
+    padding:1em;
+    overflow:auto;
+}
+    
+li:nth-of-type(2) {
+    /* custom properties voor tweede blokje */
+    --color:white;
+    --background:midnightblue;
+    --cyan:cyan;
+    --magenta:magenta;
+    --yellow:yellow;
+    --black:black;
+
+    /* met onderstaande regels staat de tekst in het midden */
+    /* en elk woord op een nieuwe regel */
+    display:grid;
+    grid-auto-columns:min-content;  
+    place-content:center;
+    text-align:center;
+            
+  background-color:var(--background);
+}
+
+li:nth-of-type(2) h2 {
+    font-family: "saira";
+    color: var(--color);
+    font-size: 3.5rem;
+    text-shadow:
+    -.05em -.05em 0 var(--cyan),
+    .05em 0 0 var(--magenta),
+    .1em 0 0 var(--yellow),
+    -.1em 0 0 var(--black)
+    ;
+}
 
 
 
